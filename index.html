@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="./styles/style.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Honk&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Honk&family=Single+Day&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet" />
+  <title>Pandagotchi</title>
+</head>
+
+<body>
+  <!------------------ HEADER ------------------>
+  <header class="header">
+    <h1>Pandagotchi</h1>
+  </header>
+  <!------------------ MAIN ------------------>
+  <main class="main">
+    <!-- Ecran contenant le jeu -->
+    <div class="conteneurJeu">
+      <!-- Conteneur des jauges -->
+      <div class="conteneurJauges">
+        <div class="conteneurNourriture">
+          <span class="scoreNourriture">Nourriture</span>
+          <progress class="jaugeNourriture" max="100" value="100"></progress>
+        </div>
+        <div class="conteneurSommeil">
+          <span class="scoreSommeil">Sommeil</span>
+          <progress class="jaugeSommeil" max="100" value="100"></progress>
+        </div>
+        <div class="conteneurJouer">
+          <span class="scoreJeu">Jeu</span>
+          <progress class="jaugeJeu" max="100" value="100"></progress>
+        </div>
+
+      </div>
+      <!-- Conteneur nom -->
+      <div class="affichageNom"></div>
+      <!-- Conteneur score global -->
+      <div class="affichageScoreGlobal"></div>
+      <!-- Panda -->
+      <div id="panda" class="panda mouvementPanda"></div>
+      <div id="accessoire" class="accessoire mouvementPanda"></div>
+      <div class="conteneurInteractions"></div>
+      <!-- Conteneur des boutons -->
+      <div class="conteneurBtns">
+        <button class="btnNourriture">
+          <span class="spanBtnNourriture">Nourrir</span>
+        </button>
+        <button class="btnSommeil">
+          <span class="spanBtnSommeil">Dormir</span>
+        </button>
+        <button class="btnJeu">
+          <span class="spanBtnJeu">Jouer</span>
+        </button>
+      </div>
+    </div>
+    <!--- POP UP CHOIX NOM --->
+    <div class="nomPanda">
+      Quel est le nom de votre panda ?
+      <input type="text" id="inputNomPanda" name="inputNomPanda" placeholder="nom de votre panda" />
+      <button class="btnNomPanda">OK</button>
+    </div>
+  </main>
+  <!------------------ FOOTER ------------------>
+  <footer class="footer"></footer>
+</body>
+
+<script src="./js/panda.js"></script>
+<script src="./js/script.js"></script>
+
+
+</html>

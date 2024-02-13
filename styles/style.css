@@ -1,0 +1,267 @@
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  color: white;
+  background: rgb(27, 110, 72);
+  background: linear-gradient(
+    158deg,
+    rgba(27, 110, 72, 1) 0%,
+    rgba(5, 81, 40, 1) 28%,
+    rgba(3, 51, 33, 1) 100%
+  );
+}
+
+h1 {
+  text-align: center;
+  font-size: 3em;
+  /* font-family: "Protest Revolution", sans-serif;
+  font-family: "Honk", system-ui; */
+  font-family: "Single Day", cursive;
+}
+
+/* Tout ce qui va être dans l'écran de jeu */
+.conteneurJeu {
+  position: relative;
+  background-image: url("../medias/9285857.jpg");
+  background-size: 800px;
+  width: 800px;
+  height: 530px;
+  margin: auto;
+  border-radius: 90px;
+  box-shadow: 7px 7px 1px 1px rgba(0, 54, 29, 0.5);
+}
+
+/* Panda */
+.panda {
+  background-image: url("../medias/panda-provisoire.png");
+  background-size: 128px;
+  width: 130px;
+  height: 130px;
+  top: 230px;
+  position: absolute;
+  left: 350px;
+}
+
+.mouvementPanda {
+  animation: mouvementPanda 2s linear infinite;
+}
+
+@keyframes mouvementPanda {
+  0% {
+    top: 210px;
+  }
+
+  50% {
+    top: 200px;
+  }
+
+  100% {
+    top: 210px;
+  }
+}
+
+.mouvementBallon {
+  animation: mouvementBallon 2s linear infinite;
+
+}
+
+@keyframes mouvementBallon {
+  50% {
+    top: 200px;
+  } 
+}
+
+
+
+.imgPandaNourriture {
+  background-image: url("../medias/panda-nourrir.png");
+  background-size: 130px;
+  width: 130px;
+  height: 127px;
+  top: 230px;
+  position: absolute; 
+  left: 350px;
+}
+
+.imgBambou {
+  background-image: url("../medias/bambou.png");
+  background-size: 30px;
+  width: 30px;
+  height: 50px;
+  top: 165px;
+ position: relative;
+  left: 398px;
+  z-index: 1;
+}
+
+.imgPandaSommeil {
+  background-image: url("../medias/panda-sommeil.png");
+  background-size: 155px;
+  width: 155px;
+  height: 108px;
+  top: 230px;
+  position: absolute;
+  left: 350px;
+}
+.imgZ {
+  background-image: url("../medias/Z.png");
+  background-size: 50px;
+  width: 50px;
+  height: 70px;
+  top: 190px;
+  position: relative;
+  left: 340px;
+  z-index: 1;
+}
+
+.imgPandaJeu {
+  background-image: url("../medias/panda-jeu.png");
+  background-size: 140px;
+  width: 140px;
+  height: 125px;
+  top: 230px;
+  position: absolute;
+  left: 350px;
+}
+
+.imgBallon {
+  background-image: url("../medias/ballon.png");
+  background-size: 50px;
+  width: 50px;
+  height: 50px;
+  top: 190px;
+  position: relative;
+  left: 340px;
+  z-index: 1;
+}
+
+/* Jauges */
+
+.conteneurJauges {
+  position: relative;
+  top: 30px;
+  width: 800px;
+  display: flex;
+  justify-content: space-evenly;
+  
+
+}
+
+.conteneurNourriture,
+.conteneurSommeil,
+.conteneurJouer {
+  width:20%;
+}
+
+
+.jaugeNourriture,
+.jaugeSommeil,
+.jaugeJeu {
+  position: relative;
+  width: 160px;
+  height: 30px;
+  background-color: grey;
+  border-radius: 20px;
+}
+
+
+
+/*Scores*/
+
+.affichageScoreGlobal {
+  top: 30px;
+  position: relative;
+  left: 570px;
+}
+
+.scoreNourriture {
+  top: 30px;
+  left: 585px;
+}
+
+/* Boutons */
+
+.conteneurBtns {
+  position: absolute;
+  bottom: 0;
+  width: 800px;
+  display: flex;
+  justify-content: space-evenly;
+  display: flex;
+  height: 335px;
+  align-items: end;
+}
+
+.btnNourriture,
+.btnSommeil,
+.btnJeu {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: #00ff93;
+  border-radius: 50px;
+  color: white;
+  text-align: center;
+  box-shadow: 4px 4px 5px 3px rgba(0, 0, 255, 0.2);
+}
+
+.btnNourriture:hover,
+.btnSommeil:hover,
+.btnJeu:hover {
+  /* box-shadow: 4px 4px 7px 5px rgba(0, 0, 255, 0.2);
+  color: rgb(255, 0, 179); */
+  color: #ffee10;
+  box-shadow: 0 0 5px #ffee10;
+  text-shadow: 0 0 5px #ffee10;
+}
+
+.spanBtnNourriture,
+.spanBtnSommeil,
+.spanBtnJeu {
+  display: flex;
+  color: white;
+  align-items: center;
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 400;
+}
+
+.spanBtnNourriture:hover,
+.spanBtnSommeil:hover,
+.spanBtnJeu:hover {
+  font-weight: 700;
+}
+
+/* Pop up choix nom panda */
+.nomPanda {
+  position: absolute;
+  width: 20%;
+  height: 10%;
+  background-color: #fff;
+  color: black;
+  padding: 2%;
+  top: -30vh;
+  margin: 40%;
+  border-radius: 40px;
+}
+
+.btnNomPanda {
+  background-color: #989292;
+  color: black;
+  padding: 2%;
+  border-radius: 40px;
+}
+
+.cache {
+  display: none;
+}
+
+.affichageNom {
+  top: 50px;
+  left: 66px;
+  position: relative;
+}
